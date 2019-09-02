@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        input:
+          destination: mytopic
+          content-type: application/json
+          group: mytopicgroup
+#        greetings-in:
+#          destination: greetings
+#          contentType: application/json
+#        greetings-out:
+#          destination: greetings
+#          contentType: application/json
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: myapplication
+      username: myUserAdmin
+      password: abc123
